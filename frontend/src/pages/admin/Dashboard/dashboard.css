@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+}
+
+.home .homeContainer {
+  flex: 4;
+}
+
+.home .homeContainer,
+.home .homeContainer .charts {
+  display: flex;
+  
+}
+
+.widgets {
+  display: flex;
+}
+
+.home .homeContainer .listContainer {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  
+}
+
+.home .homeContainer .listContainer .listTitle {
+  font-weight: 500;
+  color: gray;
+  
+}
