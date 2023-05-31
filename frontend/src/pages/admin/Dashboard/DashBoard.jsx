@@ -1,10 +1,10 @@
-import './dashboard.css'
-import Navbar from '../../../components/admin/navbar/Navbar'
-import Sidebar from '../../../components/admin/sidebar/Sidebar'
-import Featured from '../../../components/admin/featured/Featured'
-import Widget from '../../../components/admin/widget/Widget'
-import Chart from '../../../components/admin/charts/Chart'
-import Table from '../../../components/admin/table/Table'
+import "./dashboard.css";
+import Navbar from "../../../components/admin/navbar/Navbar";
+import Sidebar from "../../../components/admin/sidebar/Sidebar";
+import Featured from "../../../components/admin/featured/Featured";
+import Widget from "../../../components/admin/widget/Widget";
+import Chart from "../../../components/admin/charts/Chart";
+import Table from "../../../components/admin/table/Table";
 
 function DashBoard() {
   return (
@@ -28,7 +28,7 @@ function DashBoard() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default DashBoard
+export default DashBoard;

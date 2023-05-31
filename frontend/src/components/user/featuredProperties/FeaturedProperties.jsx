@@ -1,17 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
 import "./featuredProperties.css";
-import { useEffect } from "react";
-import { getHome } from "../../../features/hotel/hotelSlice";
+import useFetch from "../../../hooks/useFetch";
 
 const FeaturedProperties = () => {
-  const dispatch = useDispatch();
-  const { home } = useSelector((state) => state.data)
-  useEffect(() => {
-    dispatch(getHome())
-  },[dispatch])
+  const { data, loading, error } = useFetch("api/hotel/limit");
+
   return (
     <div className="fp">
-       {home.map((item) => (
+      {loading ? (
+        "Loading"
+      ) : (
+        <>
+          {data.map((item) => (
             <div className="fpItem" key={item._id}>
               <img
                 src={item.photos[0]}
@@ -27,6 +26,8 @@ const FeaturedProperties = () => {
               </div>}
             </div>
           ))}
+        </>
+      )}
     </div>
   );
 };

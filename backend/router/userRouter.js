@@ -80,7 +80,7 @@ router.put('/:id', verifyUser, expressAsyncHandler(async (req, res, next) => {
     }
 }))
 
-router.delete('/:id', verifyUser, expressAsyncHandler(async (req, res, next) => {
+router.delete('/:id', expressAsyncHandler(async (req, res, next) => {
     try {
         await User.findByIdAndDelete(req.params.id);
         res.status(200).json("User has been deleted.");
@@ -89,7 +89,7 @@ router.delete('/:id', verifyUser, expressAsyncHandler(async (req, res, next) => 
     }
 }))
 
-router.get('/:id', verifyUser, expressAsyncHandler(async (req, res, next) => {
+router.get('/:id', expressAsyncHandler(async (req, res, next) => {
     try {
         const user = await User.findById(req.params.id);
         res.status(200).json(user);
@@ -98,7 +98,7 @@ router.get('/:id', verifyUser, expressAsyncHandler(async (req, res, next) => {
     }
 }))
 
-router.get('/', verifyAdmin, expressAsyncHandler(async (req, res, next) => {
+router.get('/', expressAsyncHandler(async (req, res, next) => {
     try {
         const users = await User.find();
         res.status(200).json(users);

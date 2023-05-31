@@ -1,0 +1,10 @@
+.list {
+    display: flex;
+    width: 100%;
+  }
+  
+  .list .listContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+  }

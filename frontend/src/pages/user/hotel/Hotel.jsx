@@ -14,11 +14,11 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Reserve from "../../../components/user/reserve/Reserve";
 import { useNavigate } from "react-router-dom";
-import { fetchRoomById } from "../../../features/hotel/hotelSlice";
+import { fetchRoomById } from "../../../features/hotels/hotelSlice";
 
 const Hotel = () => {
   const [searchData, setSearchData] = useState([])
-  const { hotel } = useSelector((state) => state.data)
+  const { hotel } = useSelector((state) => state.hotel)
   const { user } = useSelector((state) => state.auth)
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);

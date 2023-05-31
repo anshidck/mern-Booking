@@ -7,11 +7,11 @@ import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../../components/user/searchItem/SearchItem";
 import { useDispatch, useSelector } from "react-redux";
-import { getHotels } from "../../../features/hotel/hotelSlice";
+import { getHotels } from "../../../features/hotels/hotelSlice";
 
 const List = () => {
   const location = useLocation();
-  const { hotels } = useSelector((state) => state.data);
+  const { hotels } = useSelector((state) => state.hotels);
   const [destination, setDestination] = useState(location.state?.destination);
   const [dates, setDates] = useState(location.state?.dates);
   const [openDate, setOpenDate] = useState(false);

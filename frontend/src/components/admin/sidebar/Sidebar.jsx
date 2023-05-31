@@ -10,17 +10,19 @@ function Sidebar() {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">lamadmin</span>
+          <span className="logo">ckadmin</span>
         </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
+          <Link to="/admin" style={{ textDecoration: "none" }}>
+            <li>
             <MdDashboard className="icon" />
             <span>Dashboard</span>
-          </li>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
@@ -28,13 +30,13 @@ function Sidebar() {
               <span>Users</span>
             </li>
           </Link>
-          <Link to="/hotels" style={{ textDecoration: "none" }}>
+          <Link to="/hotel" style={{ textDecoration: "none" }}>
             <li>
               <MdStore className="icon" />
               <span>Hotels</span>
             </li>
           </Link>
-          <Link to="/rooms" style={{ textDecoration: "none" }}>
+          <Link to="/room" style={{ textDecoration: "none" }}>
             <li>
               <AiFillCreditCard className="icon" />
               <span>Rooms</span>

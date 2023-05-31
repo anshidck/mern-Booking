@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import "./searchItem.css";
 import { Link } from 'react-router-dom'
-import { getHotelDetails } from "../../../features/hotel/hotelSlice";
+import { getHotelDetails } from "../../../features/hotel/hotelDetialsSlice";
 
 
 const SearchItem = ({item}) => {
