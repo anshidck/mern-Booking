@@ -76,21 +76,11 @@ function NewHotel() {
   const onSubmit = (e) => {
     e.preventDefault();
     const hotelData = {
-      name,
-      type,
-      city,
-      address,
-      distance,
-      photos,
-      title,
-      desc,
-      rating,
-      room,
-      cheapestPrice,
-      featured,
+      ...formData,
+      rooms
     };
     dispatch(createHotel(hotelData));
-   
+    navigate('/hotel')
   };
 
   return (
@@ -206,9 +196,8 @@ function NewHotel() {
               <div className="selectRooms">
                 <label>Rooms</label>
                 <select
-                  id="rooms"
-                  name="rooms"
-                  value={rooms}
+                  id="room"
+                  name="room"
                   multiple
                   onChange={handleSelect}
                 >

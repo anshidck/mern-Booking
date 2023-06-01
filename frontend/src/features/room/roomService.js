@@ -7,8 +7,14 @@ const fetchRoomsbyId = async (id) => {
     return response.data
 }
 
+const createRoom = async (hotelId, roomData) => {
+    const response = await axios.post('/api/room/' + hotelId, roomData)
+    return response.data
+}
+
 const roomService = {
-    fetchRoomsbyId
+    fetchRoomsbyId,
+    createRoom
 }
 
 export default roomService

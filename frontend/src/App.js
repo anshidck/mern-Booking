@@ -16,6 +16,7 @@ import Data from "./pages/admin/list/Data";
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
 import New from "./pages/admin/new/New";
 import NewHotel from "./pages/admin/newHotel/NewHotel";
+import NewRoom from "./pages/admin/newRoom/NewRoom"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/hotel" element={<Data columns={hotelColumns} />} />
         <Route path="/hotel/new" element={<NewHotel />} />
         <Route path="/room" element={<Data columns={roomColumns} />} />
+        <Route path="/room/new" element={<NewRoom/>}/>
       </Routes>
       <ToastContainer />
     </BrowserRouter>

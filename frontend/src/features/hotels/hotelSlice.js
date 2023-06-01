@@ -43,6 +43,23 @@ export const createHotel = createAsyncThunk(
     }
 )
 
+export const createRooms = createAsyncThunk(
+    'rooms/create',
+    async ({roomData, hotelId}, thunkAPI) => {
+        try {
+            return await hotelService.createRoom({roomData, hotelId})
+        } catch (error) {
+            const message =
+                (error.response &&
+                    error.response.data &&
+                    error.response.data.message) ||
+                error.message ||
+                error.toString()
+            return thunkAPI.rejectWithValue(message)
+        }
+    }
+)
+
 
 
 export const fetchRoomById = createAsyncThunk(
